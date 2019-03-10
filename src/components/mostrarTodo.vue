@@ -38,13 +38,33 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="ciud in ciudadanos">
-          <td>{{ ciud.nombre }}</td>
-          <td>{{ ciud.apellidos }}</td>
-          <td>{{ ciud.edad }}</td>
-          <td>{{ ciud.genero }}</td>
-          <td>{{ ciud.usuario }}</td>
-          <td>{{ ciud.pass }}</td>
+        <tr v-for="ciudadano in ciudadanos">
+          <td>{{ ciudadano.nombre }}</td>
+          <td>{{ ciudadano.apellidos }}</td>
+          <td>{{ ciudadano.edad }}</td>
+          <td>{{ ciudadano.genero }}</td>
+          <td>{{ ciudadano.usuario }}</td>
+          <td>{{ ciudadano.pass }}</td>
+        </tr>
+        </tbody>
+
+      </table>
+      <h2>DENUNCIAS</h2>
+      <table class="table table-danger">
+        <thead>
+        <tr>
+          <th scope="col">Denunciante</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Importancia</th>
+          <th scope="col">Contenido</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="denuncia in denuncias">
+          <td>{{ denuncia.usuarioDenunciante }}</td>
+          <td>{{ denuncia.titulo }}</td>
+          <td>{{ denuncia.importancia }}</td>
+          <td>{{ denuncia.contenido }}</td>
         </tr>
         </tbody>
 
@@ -60,6 +80,7 @@
       return {
         policias: [],
         ciudadanos: [],
+        denuncias: [],
         loaded: false
       }
     },
@@ -85,6 +106,17 @@
         }
         console.log(ciudadanosArray);
         this.ciudadanos = ciudadanosArray;
+      });
+      this.$http.get('https://policia-ciudadano.firebaseio.com/denuncias.json').then(function (data) {
+        console.log(data.json());
+        return data.json();
+      }).then(function (data) {
+        var denunciasArray = [];
+        for (let d in data) {
+          denunciasArray.push(data[d]);
+        }
+        console.log(denunciasArray);
+        this.denuncias = denunciasArray;
         this.loaded = true;
       });
 
