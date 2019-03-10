@@ -8,6 +8,7 @@
 import mainPage from "./components/mainPage";
 import registrarPolicia from "./components/registrarPolicia";
 import mostrarTodo from "./components/mostrarTodo";
+import loginCiudadano from "./components/ciudadano/loginCiudadano";
 
 export default {
   name: 'app',
@@ -19,7 +20,8 @@ export default {
   components: {
     'main-page': mainPage,
     'registrar-policia': registrarPolicia,
-    'mostrar-todo': mostrarTodo
+    'mostrar-todo': mostrarTodo,
+    'login-ciudadano': loginCiudadano
   }
 }
 </script>
