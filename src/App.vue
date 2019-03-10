@@ -6,6 +6,7 @@
 
 <script>
 import mainPage from "./components/mainPage";
+import registrarPolicia from "./components/registrarPolicia";
 
 export default {
   name: 'app',
@@ -15,7 +16,8 @@ export default {
     }
   },
   components: {
-    'main-page': mainPage
+    'main-page': mainPage,
+    'registrar-policia': registrarPolicia
   }
 }
 </script>
