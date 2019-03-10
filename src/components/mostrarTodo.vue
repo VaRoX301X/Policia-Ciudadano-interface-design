@@ -53,6 +53,7 @@
       <table class="table table-danger">
         <thead>
         <tr>
+          <th scope="col">Fecha</th>
           <th scope="col">Denunciante</th>
           <th scope="col">Titulo</th>
           <th scope="col">Importancia</th>
@@ -61,6 +62,7 @@
         </thead>
         <tbody>
         <tr v-for="denuncia in denuncias">
+          <td>{{ denuncia.fecha }}</td>
           <td>{{ denuncia.usuarioDenunciante }}</td>
           <td>{{ denuncia.titulo }}</td>
           <td>{{ denuncia.importancia }}</td>
