@@ -7,6 +7,7 @@
 <script>
 import mainPage from "./components/mainPage";
 import registrarPolicia from "./components/registrarPolicia";
+import mostrarTodo from "./components/mostrarTodo";
 
 export default {
   name: 'app',
@@ -17,7 +18,8 @@ export default {
   },
   components: {
     'main-page': mainPage,
-    'registrar-policia': registrarPolicia
+    'registrar-policia': registrarPolicia,
+    'mostrar-todo': mostrarTodo
   }
 }
 </script>
