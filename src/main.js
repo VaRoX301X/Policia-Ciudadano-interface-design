@@ -18,12 +18,21 @@ const router = new VueRouter({
 });
 // FONT AWESOME
 import { library } from '@fortawesome/fontawesome-svg-core'
-import {faBusinessTime, faCoffee, faRepublican, faWalking} from '@fortawesome/free-solid-svg-icons'
+import {
+  faBusinessTime,
+  faCoffee,
+  faUserAltSlash,
+  faWalking,
+  faUserPlus,
+  faUser
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faCoffee);
 library.add(faWalking);
-library.add(faRepublican);
 library.add(faBusinessTime);
+library.add(faUserAltSlash);
+library.add(faUserPlus);
+library.add(faUser);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
 
