@@ -8,11 +8,11 @@
         <form v-if="!generada">
           <div class="form-group">
             <label for="titulo">Titulo: </label>
-            <input type="text" id="titulo" name="titulo" required v-model="denuncia.titulo">
+            <input type="text" id="titulo" name="titulo" required v-model="denuncia.titulo" placeholder="Introduce el titulo">
           </div>
           <div class="form-group">
             <label for="contenido">Contenido</label>
-            <textarea class="form-control rounded-0" id="contenido" rows="3" v-model="denuncia.contenido"></textarea>
+            <textarea class="form-control rounded-0" id="contenido" rows="3" v-model="denuncia.contenido" placeholder="Introduce el contenido/descripción"></textarea>
           </div>
           <div class="form-group">
             <label for="importancia">Importancia: </label>

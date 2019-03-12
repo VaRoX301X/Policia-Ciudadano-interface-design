@@ -6,16 +6,18 @@
 
 <script>
 import mainPage from "./components/mainPage";
-import registrarPolicia from "./components/registrarPolicia";
+import registrarPolicia from "./components/policia/registrarPolicia";
 import mostrarTodo from "./components/mostrarTodo";
 import loginCiudadano from "./components/ciudadano/loginCiudadano";
 import generarDenuncia from "./components/generarDenuncia";
-
+import loginPolicia from "./components/policia/loginPolicia";
+import registrarCiudadano from "./components/ciudadano/registrarCiudadano";
+import alerta from "./components/varios/alerta";
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+
     }
   },
   components: {
@@ -23,7 +25,10 @@ export default {
     'registrar-policia': registrarPolicia,
     'mostrar-todo': mostrarTodo,
     'login-ciudadano': loginCiudadano,
-    'generar-denuncia': generarDenuncia
+    'generar-denuncia': generarDenuncia,
+    'login-policica': loginPolicia,
+    'registrar-ciudadano': registrarCiudadano,
+    'alerta': alerta
   }
 }
 </script>

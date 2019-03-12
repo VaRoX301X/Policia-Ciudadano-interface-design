@@ -24,7 +24,7 @@ import {
   faUserAltSlash,
   faWalking,
   faUserPlus,
-  faUser
+  faUser, faLandmark, faUserAstronaut, faArrowRight, faExclamationTriangle
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faCoffee);
@@ -33,10 +33,18 @@ library.add(faBusinessTime);
 library.add(faUserAltSlash);
 library.add(faUserPlus);
 library.add(faUser);
+library.add(faLandmark);
+library.add(faUserAstronaut);
+library.add(faArrowRight);
+library.add(faExclamationTriangle);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue)
+
+
+
+
 new Vue({
   el: '#app',
   render: h => h(App),
