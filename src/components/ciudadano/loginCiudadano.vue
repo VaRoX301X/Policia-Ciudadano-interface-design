@@ -1,5 +1,5 @@
 <template>
-  <div id="loginCiudadano">
+  <div id="loginCiudadano" v-if="cargado">
     <div class="container">
       <h4>¿Ya eres usuario/a?</h4>
       <h5>¡Rellena los siguientes campos de login y entra ya!</h5>
@@ -16,16 +16,18 @@
             <div class="form-group">
               <label for="userlogin">Usuario</label><br>
               <input type="text" class="form-control" id="userlogin" placeholder="Escribe Usuario"
-                     v-model.lazy="logged.usuario">
-              <small id="loginHelp" class="form-text text-muted">Usuario: {{ logged.usuario }}</small>
+                     v-model.lazy="usuario">
+              <small id="loginHelp" class="form-text text-muted">Usuario: {{ usuario }}</small>
             </div>
             <div class="form-group">
               <label for="pass">Contraseña</label><br>
               <input type="password" class="form-control" id="pass" placeholder="Escribe contraseña"
-                     v-model.lazy="logged.password">
+                     v-model.lazy="pass">
               <small id="passHelp" class="form-text text-muted">Nunca compartas tu contraseña con nadie.</small>
             </div>
-            <button class="btn btn-success" v-on:click="loginCiudadano">Entrar</button> <!--type="submit"-->
+            <button class="btn btn-success" v-on:click.prevent="loginCiudadano">Entrar</button>
+            <br>
+            <h5 class="text-danger" v-if="feedback">{{ feedback }}</h5>
           </form>
         </div>
         <div class="col"></div>
@@ -54,42 +56,51 @@
 </template>
 
 <script>
+  import db from '../../firebase/init';
+
   export default {
     name: "loginCiudadano",
     data() {
       return {
-        logged: {
-          usuario: '',
-          pass: ''
-        },
-        usuarios: [],
+        usuario: null,
+        pass: null,
+        ciudadanos: [],
         loginFallido: false,
+        feedback: null,
+        cargado: false
       }
     },
     methods: {
       goRegistro: function () {
         this.$router.push({name: 'rCiudadano'})
       },
-      loginCiudadano: function (e) {
-        e.preventDefault();
-        for (var c in this.usuarios) {
-          let usuario = this.usuarios[c].usuario;
-          let pass = this.usuarios[c].pass.toString();
-          console.log(pass);
-          if (this.logged.usuario === usuario) {
-            if (this.logged.pass === pass) {
-              alert('usuario Correcto');
-              this.loginFallido = false;
-            } else {
-              this.loginFallido = true;
+      loginCiudadano: function () {
+        if (this.usuario) {
+          if (this.pass) {
+            for (let c = 0; c < this.ciudadanos.length; c++) {
+              console.log(this.ciudadanos[c].usuario, this.ciudadanos[c].pass);
+              if (this.usuario === this.ciudadanos[c].usuario) {
+                if (this.pass === this.ciudadanos[c].pass) {
+                  this.feedback = null;
+                  this.loginFallido = false;
+                  this.$router.push({ name: 'ciudadano', params: { id_ciudadano: this.usuario } });
+                } else {
+                  this.loginFallido = true;
+                }
+              }
             }
+            this.loginFallido = true;
+          } else {
+            this.feedback = 'Introduce la contraseña';
           }
+        } else {
+          this.feedback = 'Introduce el usuario';
         }
-        this.loginFallido = true;
+
       }
     },
     created() {
-      this.$http.get('https://policia-ciudadano.firebaseio.com/ciudadanos.json').then(function (data) {
+      /*this.$http.get('https://policia-ciudadano.firebaseio.com/ciudadanos.json').then(function (data) {
         console.log(data.json());
         return data.json();
       }).then(function (data) {
@@ -99,7 +110,17 @@
         }
         console.log(ciudadanosArray);
         this.usuarios = ciudadanosArray;
-      });
+      });*/
+      db.collection('ciudadano').get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            console.log(doc.data(), doc.id);
+            let ciudadano = doc.data();
+            ciudadano.id = doc.id;
+            this.ciudadanos.push(ciudadano);
+          });
+          this.cargado = true;
+        })
     }
   }
 </script>

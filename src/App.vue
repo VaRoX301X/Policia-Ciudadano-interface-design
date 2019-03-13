@@ -12,6 +12,7 @@ import loginCiudadano from "./components/ciudadano/loginCiudadano";
 import generarDenuncia from "./components/generarDenuncia";
 import loginPolicia from "./components/policia/loginPolicia";
 import registrarCiudadano from "./components/ciudadano/registrarCiudadano";
+import ciudadano from "./components/ciudadano/ciudadano";
 import alerta from "./components/varios/alerta";
 export default {
   name: 'app',
@@ -28,7 +29,8 @@ export default {
     'generar-denuncia': generarDenuncia,
     'login-policica': loginPolicia,
     'registrar-ciudadano': registrarCiudadano,
-    'alerta': alerta
+    'alerta': alerta,
+    'ciudadano': ciudadano
   }
 }
 </script>
