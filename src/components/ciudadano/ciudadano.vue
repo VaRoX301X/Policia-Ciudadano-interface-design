@@ -3,7 +3,7 @@
     <div class="container">
       <div class="jumbotron">
         <h1 class="display-4">Bienvenido/a {{ ciudadano.nombre }} {{ ciudadano.apellidos }}</h1>
-        <p class="lead">Debajo de este cuadro podrás encontrar las diferentes opciones relacionadas con tu cuenta.</p>
+        <p class="lead">Debajo podrás encontrar las diferentes opciones relacionadas con tu cuenta.</p>
         <hr class="my-4">
         <div class="row">
           <div class="col-2 aligner">
@@ -20,10 +20,10 @@
             </div>
           </div>
           <div class="col-7 align-left">
-            <button type="button" class="btn btn-secondary btn-block" v-on:click.prevent="editarPerfil">Editar perfil</button>
-            <button type="button" class="btn btn-primary btn-block">Ver denuncias</button>
-            <button type="button" class="btn btn-danger btn-block">Generar pre-denuncia</button>
-            <button type="button" class="btn btn-warning btn-block btn-lg">Enviar alerta</button>
+            <button type="button" class="btn btn-secondary btn-block" v-on:click.prevent="editarPerfil">Editar perfil  <i class="fas fa-user-cog"></i></button>
+            <button type="button" class="btn btn-primary btn-block">Ver denuncias  <i class="far fa-copy"></i></button>
+            <button type="button" class="btn btn-danger btn-block">Generar pre-denuncia  <i class="far fa-newspaper"></i></button>
+            <button type="button" class="btn btn-warning btn-block btn-lg" v-on:click.prevent="enviarAlerta">Enviar alerta  <i class="fas fa-exclamation-triangle"></i></button>
           </div>
         </div>
       </div>
@@ -47,6 +47,9 @@
     methods: {
       editarPerfil() {
         this.$router.push({ name: 'eCiudadano', params: {id_ciudadano: this.datos}});
+      },
+      enviarAlerta() {
+        this.$router.push({ name: 'alerta' });
       }
     },
     created() {

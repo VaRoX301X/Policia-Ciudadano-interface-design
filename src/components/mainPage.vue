@@ -6,7 +6,7 @@
             <div class="div2">
               CIUDADANO
               <br><br>
-              <font-awesome-icon icon="walking" style="font-size: 12rem;"></font-awesome-icon>
+              <font-awesome-icon icon="walking" style="font-size: 12rem; color: black;"></font-awesome-icon>
             </div>
           </router-link>
         </div>
@@ -15,7 +15,7 @@
             <div class="div2">
               POLICIA
               <br><br>
-              <font-awesome-icon icon="business-time" style="font-size: 12rem;"></font-awesome-icon>
+              <i class="fas fa-user-shield" style="font-size: 12rem; color: black;"></i>
             </div>
           </router-link>
         </div>
@@ -26,7 +26,7 @@
             <div class="div2">
               ALERTA DE SOCORRO
               <br><br>
-              <font-awesome-icon icon="exclamation-triangle" style="font-size: 12rem;"></font-awesome-icon>
+              <font-awesome-icon icon="exclamation-triangle" style="font-size: 12rem; color: black;"></font-awesome-icon>
             </div>
           </router-link>
 
@@ -52,7 +52,7 @@
   .div1 {
     width: 48%;
     margin: 1%;
-    height: 19rem;
+    height: 18rem;
     display: inline-flex;
     align-items: center;
     box-shadow: 5px 10px 18px #888888;
