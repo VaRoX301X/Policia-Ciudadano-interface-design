@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00331145-9f03-4e0f-9bf1-5b4c1673d8f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/policia/policia.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/policia/policia.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/policia/registrarPolicia.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/policia/registrarPolicia.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ciudadano/ciudadano.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ciudadano/ciudadano.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ciudadano/registrarCiudadano.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2704">
-              <caret line="104" column="25" selection-start-line="98" selection-start-column="75" selection-end-line="104" selection-end-column="25" />
+            <state relative-caret-position="437">
+              <caret line="101" column="31" lean-forward="true" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#font-awesome-icon#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -64,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/policia/registrarPolicia.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="385">
@@ -87,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/ciudadano/ciudadano.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="156">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -111,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/policia/policia.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+            <state relative-caret-position="494">
+              <caret line="28" column="10" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="28" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -154,11 +153,11 @@
         <option value="$PROJECT_DIR$/src/components/ciudadano/registrarCiudadano.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/components/ciudadano/loginCiudadano.vue" />
-        <option value="$PROJECT_DIR$/src/components/ciudadano/ciudadano.vue" />
         <option value="$PROJECT_DIR$/src/routes.js" />
         <option value="$PROJECT_DIR$/src/components/policia/loginPolicia.vue" />
         <option value="$PROJECT_DIR$/src/components/policia/policia.vue" />
         <option value="$PROJECT_DIR$/src/components/policia/registrarPolicia.vue" />
+        <option value="$PROJECT_DIR$/src/components/ciudadano/ciudadano.vue" />
       </list>
     </option>
   </component>
@@ -260,12 +259,12 @@
       <workItem from="1552392931541" duration="4821000" />
       <workItem from="1552415367382" duration="3742000" />
       <workItem from="1552463071949" duration="4228000" />
-      <workItem from="1552480147874" duration="3309000" />
+      <workItem from="1552480147874" duration="3813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37569000" />
+    <option name="totallyTimeSpent" value="38073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -361,16 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ciudadano/registrarCiudadano.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2704">
-          <caret line="104" column="25" selection-start-line="98" selection-start-column="75" selection-end-line="104" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#font-awesome-icon#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/firebase/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -398,13 +387,6 @@
           <folding>
             <element signature="n#style#0;n#font-awesome-icon#0;n#div#0;n#router-link#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ciudadano/ciudadano.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -440,17 +422,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/policia/policia.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/policia/registrarPolicia.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="69" column="87" lean-forward="true" selection-start-line="69" selection-start-column="87" selection-end-line="69" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/policia/policia.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ciudadano/registrarCiudadano.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="101" column="31" lean-forward="true" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#font-awesome-icon#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ciudadano/ciudadano.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
         </state>
       </provider>
     </entry>
