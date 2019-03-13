@@ -67,7 +67,7 @@
                     db.collection('policia').add(this.policia).then(() => {
                       this.added = true;
                       this.feedback = null;
-                      setTimeout(() => this.$router.push({ name: 'lCiudadano' }) , 1500);
+                      setTimeout(() => this.$router.push({ name: 'lPolicia' }) , 1500);
                     }).catch(err => {
                       console.log(err);
                     });
