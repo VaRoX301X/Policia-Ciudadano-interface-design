@@ -13,48 +13,50 @@
           <form v-if="!registroExito">
             <div class="form-group">
               <label for="nombre">Nombre: </label><br>
-              <input id="nombre" type="text" name="nombre" required v-model="registerCiudadano.nombre" placeholder="Introduce nombre">
+              <input id="nombre" type="text" name="nombre" required v-model="rCiudadano.nombre" placeholder="Introduce nombre">
             </div>
             <div class="form-group">
               <label for="apellidos">Apellidos: </label><br>
-              <input id="apellidos" type="text" name="apellidos" required v-model="registerCiudadano.apellidos" placeholder="Introduce apellidos">
+              <input id="apellidos" type="text" name="apellidos" required v-model="rCiudadano.apellidos" placeholder="Introduce apellidos">
             </div>
             <div class="form-group">
               <label for="dni">DNI: </label><br>
-              <input id="dni" type="text" name="dni" required v-model="registerCiudadano.dni" placeholder="Introduce DNI">
+              <input id="dni" type="text" name="dni" required v-model="rCiudadano.dni" placeholder="Introduce DNI">
             </div>
             <div class="form-group">
               <label for="edad">Edad: </label><br>
-              <input id="edad" type="number" name="edad" required v-model="registerCiudadano.edad" placeholder="Introduce edad">
+              <input id="edad" type="number" name="edad" required v-model="rCiudadano.edad" placeholder="Introduce edad">
             </div>
             <div class="form-group">
               <label for="genero">Genero: </label><br>
-              <select id="genero" name="genero" v-model="registerCiudadano.genero" placeholder="Introduce género">
+              <select id="genero" name="genero" v-model="rCiudadano.genero" placeholder="Introduce género">
                 <option v-for="genero in generos">{{ genero }}</option>
               </select>
             </div>
             <div class="form-group">
               <label for="usuario">Usuario: </label><br>
-              <input id="usuario" type="text" name="usuario" required v-model="registerCiudadano.usuario" placeholder="Introduce nombre de usuario">
+              <input id="usuario" type="text" name="usuario" required v-model="rCiudadano.usuario" placeholder="Introduce nombre de usuario">
             </div>
             <div class="form-group">
               <label for="pass">Contraseña: </label><br>
-              <input id="pass" type="password" name="pass" required v-model="registerCiudadano.pass" placeholder="Introduce contraseña">
+              <input id="pass" type="password" name="pass" required v-model="rCiudadano.pass" placeholder="Introduce contraseña">
               <small id="passHelp2" class="form-text text-muted">Asegurate de poner la contraseña correcta.</small>
             </div>
           </form>
         </div>
         <div class="col">
           <h6>Preview del registro:</h6>
-          <p><b>Nombre:</b> {{ registerCiudadano.nombre }}</p>
-          <p><b>Apellidos:</b> {{ registerCiudadano.apellidos }}</p>
-          <p><b>DNI:</b> {{ registerCiudadano.dni }}</p>
-          <p><b>Edad:</b> {{ registerCiudadano.edad }}</p>
-          <p><b>Género:</b> {{ registerCiudadano.genero }}</p>
-          <p><b>Usuario:</b> {{ registerCiudadano.usuario }}</p>
+          <p><b>Nombre:</b> {{ rCiudadano.nombre }}</p>
+          <p><b>Apellidos:</b> {{ rCiudadano.apellidos }}</p>
+          <p><b>DNI:</b> {{ rCiudadano.dni }}</p>
+          <p><b>Edad:</b> {{ rCiudadano.edad }}</p>
+          <p><b>Género:</b> {{ rCiudadano.genero }}</p>
+          <p><b>Usuario:</b> {{ rCiudadano.usuario }}</p>
           <button type="submit" class="btn btn-success" v-on:click.prevent="registrarCiudadano" v-if="!registroExito">
             Correcto, Registrar
           </button>
+          <br>
+          <h3 class="text-danger" v-if="feedback">{{ feedback }}</h3>
         </div>
       </div>
     </div>
@@ -62,33 +64,66 @@
 </template>
 
 <script>
+  import db from '../../firebase/init';
   export default {
     name: "registrarCiudadano",
     data() {
       return {
-        registerCiudadano: {
-          nombre: '',
-          apellidos: '',
-          edad: '',
-          genero: '',
-          usuario: '',
-          pass: '',
-          dni: '',
-          propiedades: {
-            vehiculos: [],
-            establecimientos: []
-          }
+        rCiudadano: {
+          nombre: null,
+          apellidos: null,
+          edad: null,
+          genero: null,
+          usuario: null,
+          pass: null,
+          dni: null,
+          propiedades: []
         },
         registroExito: false,
-        generos: ['Hombre', 'Mujer', 'Prefiero no decirlo']
+        generos: ['Hombre', 'Mujer', 'Prefiero no decirlo'],
+        feedback: null
       }
     },
     methods: {
       registrarCiudadano: function () {
-        this.$http.post('https://policia-ciudadano.firebaseio.com/ciudadanos.json', this.registerCiudadano).then(function (data) {
-          console.log(data);
-          this.registroExito = true;
-        })
+        if (this.rCiudadano.nombre){
+          if (this.rCiudadano.apellidos){
+            if (this.rCiudadano.edad){
+              if (this.rCiudadano.genero){
+                if (this.rCiudadano.dni){
+                  if (this.rCiudadano.usuario){
+                    if (this.rCiudadano.pass){
+                      /*this.$http.post('https://policia-ciudadano.firebaseio.com/ciudadanos.json', this.registerCiudadano).then(function (data) {
+                        console.log(data);
+                      });*/
+                      db.collection('ciudadano').add(this.rCiudadano).then(() => {
+                        this.registroExito = true;
+                        this.feedback = null;
+                        setTimeout(() => this.$router.push({ name: 'lCiudadano' }) , 1500);
+                      }).catch(err => {
+                        console.log(err);
+                      });
+                    } else {
+                      this.feedback = 'Rellena el campo contraseña';
+                    }
+                  } else {
+                    this.feedback = 'Rellena el campo usuario';
+                  }
+                } else {
+                  this.feedback = 'Rellena el campo dni';
+                }
+              } else {
+                this.feedback = 'Selecciona el campo genero';
+              }
+            } else {
+              this.feedback = 'Rellena el campo edad';
+            }
+          } else {
+            this.feedback = 'Rellena el campo apellidos';
+          }
+        } else {
+          this.feedback = 'Rellena el campo nombre';
+        }
       },
     }
   }

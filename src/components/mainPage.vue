@@ -1,6 +1,5 @@
 <template>
     <div id="mainPage">
-      <h3 class="pregunta">¿Eres policia o ciudadano?</h3>
       <div id="eleccionInicial">
         <div class="div1">
           <router-link :to="{ name: 'lCiudadano' }" tag="a">
@@ -53,7 +52,7 @@
   .div1 {
     width: 48%;
     margin: 1%;
-    height: 30rem;
+    height: 19rem;
     display: inline-flex;
     align-items: center;
     box-shadow: 5px 10px 18px #888888;
@@ -68,7 +67,7 @@
   }
 
   .div2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: center;
     width: 100%;
   }
