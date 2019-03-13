@@ -19,12 +19,8 @@ const router = new VueRouter({
 // FONT AWESOME
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
-  faBusinessTime,
-  faCoffee,
-  faUserAltSlash,
-  faWalking,
-  faUserPlus,
-  faUser, faLandmark, faUserAstronaut, faArrowRight, faExclamationTriangle
+  faBusinessTime, faCoffee, faUserAltSlash, faWalking, faUserPlus, faUser, faLandmark, faUserAstronaut, faArrowRight,
+  faExclamationTriangle, faUserCircle
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faCoffee);
@@ -37,6 +33,7 @@ library.add(faLandmark);
 library.add(faUserAstronaut);
 library.add(faArrowRight);
 library.add(faExclamationTriangle);
+library.add(faUserCircle);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
 
