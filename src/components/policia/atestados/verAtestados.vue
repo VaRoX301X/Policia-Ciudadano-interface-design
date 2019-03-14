@@ -13,7 +13,7 @@
           <h5 class="card-title">{{atestado.titulo}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ atestado.lugar }}</h6>
           <p class="card-text">{{ atestado.descripcionBreve }}</p>
-          <a href="#" class="card-link">ver más</a>
+          <a class="card-link clicker" v-on:click.prevent="verAtestado(atestado.slug)">ver más</a>
         </div>
       </div>
     </div>
@@ -33,7 +33,10 @@
       methods: {
           volverAtras(){
             this.$router.push({ name: 'policia', params: {id_policia: this.datos}});
-          }
+          },
+        verAtestado(slug) {
+            this.$router.push({name: 'verAtestado', params: {slug: slug, id_policia: this.datos }});
+        }
       },
       created() {
           this.datos = this.$route.params.id_policia;
@@ -69,5 +72,10 @@
     bottom: 3rem;
     left: 3rem;
     cursor: pointer;
+  }
+  .clicker {
+    text-decoration: underline !important;
+    cursor: pointer;
+    color: deepskyblue !important;
   }
 </style>

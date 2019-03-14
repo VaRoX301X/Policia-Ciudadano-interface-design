@@ -11,6 +11,7 @@ import alerta from "./components/varios/alerta";
 import editarCiudadano from "./components/ciudadano/editarCiudadano";
 import editarPolicia from "./components/policia/editarPolicia";
 import verAtestados from "./components/policia/atestados/verAtestados";
+import verAtestado from "./components/policia/atestados/verAtestado";
 
 export default [
   { path: '*', name: '*', component: mainPage},
@@ -26,5 +27,6 @@ export default [
   { path: '/eeditarpolicia/id_policia', name: 'ePolicia', component: editarPolicia},
   { path: '/loginPolicia', name: 'lPolicia', component: loginPolicia},
   { path: '/atestados/id_policia', name: 'atestados', component: verAtestados},
+  { path: '/veratestado/slug', name: 'verAtestado', component: verAtestado},
   { path: '/alerta', name: 'alerta', component: alerta}
 ]
