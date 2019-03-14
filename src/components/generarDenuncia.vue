@@ -1,5 +1,5 @@
 <template>
-    <div id="generarDenuncia">
+    <div id="generarDenuncia" v-if="usuarios">
       <b-container>
         <h2>Generar denuncia</h2>
         <div v-if="generada">
@@ -48,17 +48,24 @@
           return {
             usuarios: [],
             denuncia: {
-              usuarioDenunciante: '',
-              titulo: '',
-              contenido: '',
-              importancia: '',
-              fecha: ''
+              usuarioDenunciante: null,
+              titulo: null,
+              contenido: null,
+              importancia: null,
+              fecha: null,
+              imagenUrl: 'https://unsplash.com/a/img/empty-states/photos.png',
+              tipo: null,
+              aceptada: false
             },
             importancias: [
               'Leve',
               'Media',
               'Grave'
             ],
+            tipos: [
+              ''
+            ]
+            ,
             generada: false
           }
       },
