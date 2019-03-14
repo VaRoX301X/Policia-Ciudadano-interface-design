@@ -46,7 +46,7 @@
 
       },
       verAtestados() {
-
+        this.$router.push({name:'atestados', params: {id_policia: this.datos}})
       },
       editarPerfil(){
         this.$router.push({ name: 'ePolicia', params: { id_policia: this.datos }});
@@ -55,7 +55,7 @@
     },
     created() {
       this.datos = this.$route.params.id_policia;
-      let ref = db.collection('policia').where('numeroPlaca', '==', this.$route.params.id_policia);
+      let ref = db.collection('policia').where('numeroPlaca', '==', this.datos);
       ref.get().then(snapshot => {
         snapshot.forEach(doc => {
           this.policia = doc.data();
