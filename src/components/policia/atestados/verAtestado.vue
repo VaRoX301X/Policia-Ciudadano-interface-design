@@ -1,12 +1,12 @@
 <template>
-  <div id="ver-atestado">
+  <div id="ver-atestado" v-if="atestado">
     <div class="volver">
       <i class="fas fa-arrow-circle-left" style="color: cadetblue; font-size: 4rem;"
          v-on:click.prevent="volverAtras"></i>
     </div>
     <div class="container">
       <hr>
-      <i class="fas fa-file-alt" style="font-size: 7rem; color: #000;"></i>
+      <i class="fas fa-file-alt" style="font-size: 7rem; color: cadetblue;"></i>
       <hr>
       <h3>{{ atestado.titulo }}</h3>
       <hr>

@@ -12,6 +12,7 @@ import editarCiudadano from "./components/ciudadano/editarCiudadano";
 import editarPolicia from "./components/policia/editarPolicia";
 import verAtestados from "./components/policia/atestados/verAtestados";
 import verAtestado from "./components/policia/atestados/verAtestado";
+import nuevoAtestado from "./components/policia/atestados/nuevoAtestado";
 
 export default [
   { path: '*', name: '*', component: mainPage},
@@ -23,10 +24,11 @@ export default [
   { path: '/ciudadano/:id_ciudadano', name: 'ciudadano', component: ciudadano},
   { path: '/editarciudadano/:id_ciudadano', name: 'eCiudadano', component: editarCiudadano},
   { path: '/generardenuncia', name: 'gDenuncia', component: generarDenuncia},
-  { path: '/policia/id_policia', name: 'policia', component: policia},
-  { path: '/eeditarpolicia/id_policia', name: 'ePolicia', component: editarPolicia},
+  { path: '/policia/:id_policia', name: 'policia', component: policia},
+  { path: '/eeditarpolicia/:id_policia', name: 'ePolicia', component: editarPolicia},
   { path: '/loginPolicia', name: 'lPolicia', component: loginPolicia},
-  { path: '/atestados/id_policia', name: 'atestados', component: verAtestados},
-  { path: '/veratestado/slug', name: 'verAtestado', component: verAtestado},
+  { path: '/atestados/:id_policia', name: 'atestados', component: verAtestados},
+  { path: '/veratestado/:slug', name: 'verAtestado', component: verAtestado},
+  { path: '/nuevoAtestado', name: 'nuevoAtestado', component: nuevoAtestado},
   { path: '/alerta', name: 'alerta', component: alerta}
 ]
