@@ -1,5 +1,5 @@
 <template>
-  <div id="registrarCiudadano">
+  <div id="registrarCiudadano" v-if="cargado">
     <div class="container">
       <h4>Registro Usuario</h4>
       <br>
@@ -81,7 +81,9 @@
         },
         registroExito: false,
         generos: ['Hombre', 'Mujer', 'Prefiero no decirlo'],
-        feedback: null
+        feedback: null,
+        nombresUsuario: [],
+        cargado: false
       }
     },
     methods: {
@@ -93,16 +95,18 @@
                 if (this.rCiudadano.dni){
                   if (this.rCiudadano.usuario){
                     if (this.rCiudadano.pass){
-                      /*this.$http.post('https://policia-ciudadano.firebaseio.com/ciudadanos.json', this.registerCiudadano).then(function (data) {
-                        console.log(data);
-                      });*/
-                      db.collection('ciudadano').add(this.rCiudadano).then(() => {
-                        this.registroExito = true;
-                        this.feedback = null;
-                        setTimeout(() => this.$router.push({ name: 'lCiudadano' }) , 1500);
-                      }).catch(err => {
-                        console.log(err);
-                      });
+                      if(this.nombresUsuario.indexOf(this.rCiudadano.usuario) == -1){
+                        db.collection('ciudadano').add(this.rCiudadano).then(() => {
+                          this.registroExito = true;
+                          this.feedback = null;
+                          setTimeout(() => this.$router.push({ name: 'lCiudadano' }) , 1500);
+                        }).catch(err => {
+                          console.log(err);
+                        });
+                      } else {
+                        this.feedback = 'El nombre de usuario [' + this.rCiudadano.usuario + '] ya existe';
+                      }
+
                     } else {
                       this.feedback = 'Rellena el campo contraseña';
                     }
@@ -125,6 +129,17 @@
           this.feedback = 'Rellena el campo nombre';
         }
       },
+    },
+    created() {
+      db.collection('ciudadano').get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            console.log(doc.data(), doc.id);
+            let userName = doc.data().usuario;
+            this.nombresUsuario.push(userName);
+          });
+          this.cargado = true;
+        })
     }
   }
 </script>
