@@ -56,10 +56,6 @@
       },
       methods: {
           regPolicia: function(){
-            /*this.$http.post('https://policia-ciudadano.firebaseio.com/policias.json', this.policia).then(function(data){
-              console.log(data);
-              this.added = true;
-            });*/
             if (this.policia.nombre){
               if (this.policia.apellidos){
                 if (this.policia.numeroPlaca){

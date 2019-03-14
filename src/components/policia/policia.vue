@@ -49,7 +49,7 @@
 
       },
       editarPerfil(){
-
+        this.$router.push({ name: 'ePolicia', params: { id_policia: this.datos }});
       }
 
     },

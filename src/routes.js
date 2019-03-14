@@ -9,6 +9,7 @@ import policia from "./components/policia/policia";
 import loginPolicia from "./components/policia/loginPolicia";
 import alerta from "./components/varios/alerta";
 import editarCiudadano from "./components/ciudadano/editarCiudadano";
+import editarPolicia from "./components/policia/editarPolicia";
 
 export default [
   { path: '*', name: '*', component: mainPage},
@@ -21,6 +22,7 @@ export default [
   { path: '/editarciudadano/:id_ciudadano', name: 'eCiudadano', component: editarCiudadano},
   { path: '/generardenuncia', name: 'gDenuncia', component: generarDenuncia},
   { path: '/policia/id_policia', name: 'policia', component: policia},
+  { path: '/eeditarpolicia/id_policia', name: 'ePolicia', component: editarPolicia},
   { path: '/loginPolicia', name: 'lPolicia', component: loginPolicia},
   { path: '/alerta', name: 'alerta', component: alerta}
 ]
