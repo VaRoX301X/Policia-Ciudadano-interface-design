@@ -1,24 +1,24 @@
 <template>
   <div id="ver-atestado" v-if="atestado">
     <div class="volver">
-      <i class="fas fa-arrow-circle-left" style="color: cadetblue; font-size: 4rem;"
+      <i class="fas fa-arrow-circle-left" style="color: #17a2b8; font-size: 4rem;"
          v-on:click.prevent="volverAtras"></i>
     </div>
     <div class="container">
       <hr>
-      <i class="fas fa-file-alt" style="font-size: 7rem; color: cadetblue;"></i>
+      <i class="fas fa-file-alt" style="font-size: 7rem; color: #17a2b8;"></i>
       <hr>
       <h3>{{ atestado.titulo }}</h3>
       <hr>
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <div class="card">
+          <div class="card" style="margin-bottom: 1rem">
             <div class="card-body">
               <h5 class="card-title">{{ atestado.lugar }}</h5>
               <p class="card-text">{{ atestado.descripcion }}</p>
-              <h5 class="card-title">Personas involucradas</h5>
-              <p class="card-text" v-for="dni in atestado.contactos">{{dni}}</p>
+              <h5 class="card-title">Personas implicadas</h5>
+              <p class="card-text" v-for="dni in atestado.implicados">{{dni}}</p>
               <h5 class="card-title">Vehículos involucrados</h5>
               <p class="card-text" v-for="vehiculo in atestado.vehiculos">{{vehiculo}}</p>
             </div>
@@ -38,7 +38,7 @@
     data() {
       return {
         datos: null,
-        slug: null,
+        id_atestado: null,
         atestado: null,
       }
     },
@@ -48,16 +48,12 @@
       }
     },
     created() {
-      this.slug = this.$route.params.slug;
+      this.id_atestado = this.$route.params.id_atestado;
       this.datos = this.$route.params.id_policia;
-      let ref = db.collection('atestado').where('slug', '==', this.slug);
-      ref.get().then(snapshot => {
-        snapshot.forEach(doc => {
-          this.atestado = doc.data();
-          this.atestado.id = doc.id;
-          console.log(this.atestado);
-        })
-      })
+      this.atestado = db.collection('atestado').doc(this.$route.params.id_atestado).get().then( atestado => {
+        this.atestado = atestado.data();
+      });
+      console.log(this.atestado);
     }
   }
 </script>

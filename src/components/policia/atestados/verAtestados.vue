@@ -1,19 +1,17 @@
 <template>
     <div id="ver-atestados" v-if="cargado">
-      <div class="anyadir">
-        <router-link to="">
-          <i class="fas fa-plus-circle" style="color: cadetblue; font-size: 4rem;"></i>
-        </router-link>
+      <div class="nuevo">
+          <i class="fas fa-plus-circle" style="color: #17a2b8; font-size: 4rem;" v-on:click.prevent="nuevoAtestado"></i>
       </div>
       <div class="volver">
-        <i class="fas fa-arrow-circle-left" style="color: cadetblue; font-size: 4rem;" v-on:click.prevent="volverAtras"></i>
+        <i class="fas fa-arrow-circle-left" style="color: #17a2b8; font-size: 4rem;" v-on:click.prevent="volverAtras"></i>
       </div>
       <div class="card" style="width: 18rem;" v-for="atestado in atestados" :key="atestado.id">
         <div class="card-body">
           <h5 class="card-title">{{atestado.titulo}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ atestado.lugar }}</h6>
           <p class="card-text">{{ atestado.descripcionBreve }}</p>
-          <a class="card-link clicker" v-on:click.prevent="verAtestado(atestado.slug)">ver más</a>
+          <a class="card-link clicker" v-on:click.prevent="verAtestado(atestado.id)" style="color: #17a2b8;">ver más</a>
         </div>
       </div>
     </div>
@@ -34,8 +32,11 @@
           volverAtras(){
             this.$router.push({ name: 'policia', params: {id_policia: this.datos}});
           },
-        verAtestado(slug) {
-            this.$router.push({name: 'verAtestado', params: {slug: slug, id_policia: this.datos }});
+        verAtestado(id) {
+            this.$router.push({name: 'verAtestado', params: {id_atestado: id, id_policia: this.datos }});
+        },
+        nuevoAtestado() {
+            this.$router.push({name: 'nuevoAtestado', params: {id_policia: this.datos}})
         }
       },
       created() {
@@ -62,10 +63,11 @@
     margin: 4rem 2rem 4rem 2rem;
     text-align: center;
   }
-  .anyadir {
+  .nuevo {
     position: absolute;
     bottom: 3rem;
     right: 3rem;
+    cursor: pointer;
   }
   .volver {
     position: absolute;

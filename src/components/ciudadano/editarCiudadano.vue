@@ -52,12 +52,12 @@
             <p>Propiedades:</p>
             <div v-for="(prop, index) in ciudadano.propiedades" :key="index" class="relativo">
               <label for="propiedad">Propiedad:</label>
-              <input type="text" name="propiedad" v-model="ciudadano.propiedades[index]">
+              <input type="text" id="propiedad" v-model="ciudadano.propiedades[index]">
               <i class="fas fa-trash-alt delete" @click="borrarPropiedad(prop)"></i>
             </div>
             <div class="">
               <label for="addPropiedad">Añadir propiedad:</label>
-              <input type="text" name="addPropiedad" v-on:keydown.enter.prevent="addPropiedad" v-model="otra">
+              <input type="text" id="addPropiedad" v-on:keydown.enter.prevent="addPropiedad" v-model="otra">
             </div>
 
 

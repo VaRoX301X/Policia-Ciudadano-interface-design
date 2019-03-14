@@ -28,7 +28,7 @@ export default [
   { path: '/eeditarpolicia/:id_policia', name: 'ePolicia', component: editarPolicia},
   { path: '/loginPolicia', name: 'lPolicia', component: loginPolicia},
   { path: '/atestados/:id_policia', name: 'atestados', component: verAtestados},
-  { path: '/veratestado/:slug', name: 'verAtestado', component: verAtestado},
-  { path: '/nuevoAtestado', name: 'nuevoAtestado', component: nuevoAtestado},
+  { path: '/veratestado/:id_atestado', name: 'verAtestado', component: verAtestado},
+  { path: '/nuevoAtestado/:id_policia', name: 'nuevoAtestado', component: nuevoAtestado},
   { path: '/alerta', name: 'alerta', component: alerta}
 ]

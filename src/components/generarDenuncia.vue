@@ -63,7 +63,8 @@
           }
       },
       created() {
-        this.$http.get('https://policia-ciudadano.firebaseio.com/ciudadanos.json').then(function (data) {
+
+        /*this.$http.get('https://policia-ciudadano.firebaseio.com/ciudadanos.json').then(function (data) {
           console.log(data.json());
           return data.json();
         }).then(function (data) {
@@ -71,15 +72,15 @@
             this.usuarios.push(data[c].usuario);
           }
           console.log(this.usuarios);
-        });
+        });*/
       },
       methods: {
         generarDenuncia: function() {
           this.denuncia.fecha = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-          this.$http.post('https://policia-ciudadano.firebaseio.com/denuncias.json', this.denuncia).then(function (data) {
+          /*this.$http.post('https://policia-ciudadano.firebaseio.com/denuncias.json', this.denuncia).then(function (data) {
             console.log(data);
             this.generada = true;
-          })
+          })*/
         }
       }
     }
