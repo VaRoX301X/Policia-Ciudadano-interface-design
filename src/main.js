@@ -39,7 +39,9 @@ Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue)
 
-
+Vue.filter('shortener', function (value) {
+  return (value.slice(0,100)+ '...')
+});
 
 
 new Vue({

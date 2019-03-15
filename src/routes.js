@@ -14,6 +14,9 @@ import verAtestados from "./components/policia/atestados/verAtestados";
 import verAtestado from "./components/policia/atestados/verAtestado";
 import nuevoAtestado from "./components/policia/atestados/nuevoAtestado";
 import generarDenunciaPolicia from "./components/policia/denuncias/generarDenunciaPolicia";
+import verDenunciasPolicia from "./components/policia/denuncias/verDenunciasPolicia";
+import verDenunciaPolicia from "./components/policia/denuncias/verDenunciaPolicia";
+import editarDenunciaPolicia from "./components/policia/denuncias/editarDenunciaPolicia";
 
 export default [
   { path: '*', name: '*', component: mainPage},
@@ -33,4 +36,7 @@ export default [
   { path: '/nuevoAtestado/:id_policia', name: 'nuevoAtestado', component: nuevoAtestado},
   { path: '/alerta', name: 'alerta', component: alerta},
   { path: '/policia/:id_policia/generarDenuncia', name: 'gDenunciaP', component: generarDenunciaPolicia},
+  { path: '/policia/:id_policia/verDenuncias', name: 'vDenunciasP', component: verDenunciasPolicia},
+  { path: '/policia/:id_policia/verDenuncia/:denunciaId', name: 'vDenunciaP', component: verDenunciaPolicia},
+  { path: '/policia/:id_policia/editarDenuncia/:denunciaId', name: 'eDenunciaP', component: editarDenunciaPolicia},
 ]

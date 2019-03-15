@@ -60,19 +60,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2rem;
-    margin: 4rem 2rem 4rem 2rem;
+    margin: 4rem 2rem 6rem 2rem;
     text-align: center;
   }
   .nuevo {
-    position: absolute;
-    bottom: 3rem;
-    right: 3rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
     cursor: pointer;
   }
   .volver {
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
     cursor: pointer;
   }
   .clicker {

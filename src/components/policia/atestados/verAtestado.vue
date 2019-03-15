@@ -60,9 +60,9 @@
 
 <style scoped>
   .volver {
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
     cursor: pointer;
   }
 </style>

@@ -59,7 +59,8 @@
           fecha: null,
           imagenUrl: 'https://unsplash.com/a/img/empty-states/photos.png',
           tipo: null,
-          aceptada: true
+          aceptada: true,
+          aportaciones: []
         },
         importancias: [
           'Leve',
@@ -87,13 +88,29 @@
     methods: {
       generarDenuncia: function () {
         this.denuncia.fecha = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
+        if (this.denuncia.titulo) {
+          if (this.denuncia.contenido) {
+            if (this.denuncia.importancia) {
+              if (this.denuncia.tipo) {
+                db.collection('denuncia').add(this.denuncia).then(() => {
+                  this.feedback = null;
+                  this.$router.push({name: 'policia', params: {id_policia: this.datos}});
+                }).catch(err => {
+                  console.log(err);
+                });
+              } else {
+                this.feedback = 'Introduce tipo.';
+              }
+            } else {
+              this.feedback = 'Introduce importancia.';
+            }
+          } else {
+            this.feedback = 'Introduce contenido.';
+          }
+        } else {
+          this.feedback = 'Introduce titulo.';
+        }
 
-        db.collection('denuncia').add(this.denuncia).then(() => {
-          this.feedback = null;
-          this.$router.push({name: 'policia', params: {id_policia: this.datos}});
-        }).catch(err => {
-          console.log(err);
-        });
       }
     }
   }
