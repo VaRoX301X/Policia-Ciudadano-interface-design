@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00331145-9f03-4e0f-9bf1-5b4c1673d8f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/generarDenuncia.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/generarDenuncia.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -43,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/policia/atestados/verAtestado.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="390">
               <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -57,8 +58,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/generarDenuncia.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="64" column="20" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+            <state relative-caret-position="255">
+              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ciudadano/loginCiudadano.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="590">
+              <caret line="122" column="10" selection-start-line="113" selection-start-column="6" selection-end-line="122" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#font-awesome-icon#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font-awesome-icon#0;n#div#1;n#div#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font-awesome-icon#1;n#div#1;n#div#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/ciudadano/editarCiudadano.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3718">
-              <caret line="143" column="11" lean-forward="true" selection-start-line="141" selection-start-column="8" selection-end-line="143" selection-end-column="11" />
+              <caret line="143" column="11" selection-start-line="141" selection-start-column="8" selection-end-line="143" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -88,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/policia/registrarPolicia.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1768">
-              <caret line="68" column="23" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="68" selection-end-column="23" />
+              <caret line="68" column="23" selection-start-line="62" selection-start-column="20" selection-end-line="68" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -137,9 +152,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -149,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,6 +208,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,18 +266,19 @@
       <workItem from="1552555210174" duration="1138000" />
       <workItem from="1552569002984" duration="2703000" />
       <workItem from="1552585052461" duration="5265000" />
-      <workItem from="1552600558106" duration="699000" />
+      <workItem from="1552600558106" duration="729000" />
+      <workItem from="1552632396208" duration="1306000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59346000" />
+    <option name="totallyTimeSpent" value="60682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20621282" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20621282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -401,18 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ciudadano/loginCiudadano.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3172">
-          <caret line="122" column="10" selection-start-line="113" selection-start-column="6" selection-end-line="122" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#font-awesome-icon#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#font-awesome-icon#0;n#div#1;n#div#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#font-awesome-icon#1;n#div#1;n#div#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ciudadano/registrarCiudadano.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3458">
@@ -461,6 +465,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/policia/atestados/verAtestado.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/policia/atestados/nuevoAtestado.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2548">
@@ -471,7 +487,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/ciudadano/editarCiudadano.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3718">
-          <caret line="143" column="11" lean-forward="true" selection-start-line="141" selection-start-column="8" selection-end-line="143" selection-end-column="11" />
+          <caret line="143" column="11" selection-start-line="141" selection-start-column="8" selection-end-line="143" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
@@ -481,26 +497,26 @@
     <entry file="file://$PROJECT_DIR$/src/components/policia/registrarPolicia.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1768">
-          <caret line="68" column="23" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="68" selection-end-column="23" />
+          <caret line="68" column="23" selection-start-line="62" selection-start-column="20" selection-end-line="68" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/policia/atestados/verAtestado.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/ciudadano/loginCiudadano.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        <state relative-caret-position="590">
+          <caret line="122" column="10" selection-start-line="113" selection-start-column="6" selection-end-line="122" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font-awesome-icon#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font-awesome-icon#0;n#div#1;n#div#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font-awesome-icon#1;n#div#1;n#div#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/generarDenuncia.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="64" column="20" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+        <state relative-caret-position="255">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
         </state>
       </provider>
     </entry>
