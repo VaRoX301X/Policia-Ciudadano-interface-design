@@ -43,10 +43,10 @@
     },
     methods:{
       generarDenuncia() {
-
+        this.$router.push({name:'gDenunciaP', params: {id_policia: this.datos}});
       },
       verAtestados() {
-        this.$router.push({name:'atestados', params: {id_policia: this.datos}})
+        this.$router.push({name:'atestados', params: {id_policia: this.datos}});
       },
       editarPerfil(){
         this.$router.push({ name: 'ePolicia', params: { id_policia: this.datos }});
