@@ -21,8 +21,8 @@
           </div>
           <div class="col-7 align-left">
             <button type="button" class="btn btn-secondary btn-block" v-on:click.prevent="editarPerfil">Editar perfil  <i class="fas fa-user-cog"></i></button>
-            <button type="button" class="btn btn-primary btn-block">Ver denuncias  <i class="far fa-copy"></i></button>
-            <button type="button" class="btn btn-danger btn-block">Generar pre-denuncia  <i class="far fa-newspaper"></i></button>
+            <button type="button" class="btn btn-primary btn-block" v-on:click.prevent="verDenuncias">Ver denuncias  <i class="far fa-copy"></i></button>
+            <button type="button" class="btn btn-danger btn-block" v-on:click.prevent="generarDenuncia">Generar pre-denuncia  <i class="far fa-newspaper"></i></button>
             <button type="button" class="btn btn-warning btn-block btn-lg" v-on:click.prevent="enviarAlerta">Enviar alerta  <i class="fas fa-exclamation-triangle"></i></button>
           </div>
         </div>
@@ -50,6 +50,12 @@
       },
       enviarAlerta() {
         this.$router.push({ name: 'alerta' });
+      },
+      generarDenuncia() {
+        this.$router.push({ name: 'gDenunciaC', params: {id_ciudadano: this.datos}});
+      },
+      verDenuncias() {
+        this.$router.push({ name: 'vDenunciasC', params: {id_ciudadano: this.datos}});
       }
     },
     created() {

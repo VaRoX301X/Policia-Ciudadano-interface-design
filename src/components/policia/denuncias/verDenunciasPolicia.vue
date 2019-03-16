@@ -5,6 +5,8 @@
       <div class="card-body">
         <h5 class="card-title">{{ denuncia.titulo }}</h5>
         <p class="card-text">{{denuncia.contenido | shortener }}</p>
+        <small>{{ denuncia.usuarioDenunciante }}</small>
+        <br>
         <a href="#" class="card-link" v-on:click.prevent="verDenuncia(denuncia.id)">Ver denuncia</a>
       </div>
     </div>

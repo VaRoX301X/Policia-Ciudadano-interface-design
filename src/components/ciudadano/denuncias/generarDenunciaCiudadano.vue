@@ -1,5 +1,5 @@
 <template>
-  <div id="generarDenunciaPolicia" v-if="cargado">
+  <div class="generarDenunciaCiudadano">
     <div class="container">
       <br>
       <h2>Generar denuncia: {{ datos }}</h2>
@@ -47,14 +47,13 @@
 
 <script>
   import db from '../../../firebase/init';
-
   export default {
-    name: "generarDenunciaPolicia",
+    name: "generarDenunciaCiudadano",
     data() {
       return {
         usuarios: [],
         denuncia: {
-          usuarioDenunciante: 'Policia',
+          usuarioDenunciante: null,
           denunciado: null,
           titulo: null,
           contenido: null,
@@ -62,7 +61,7 @@
           fecha: null,
           imagenUrl: 'https://unsplash.com/a/img/empty-states/photos.png',
           tipo: null,
-          aceptada: true,
+          aceptada: false,
           aportaciones: []
         },
         importancias: [
@@ -82,13 +81,11 @@
           'Secuestro'
         ],
         datos: null,
-        feedback: null,
-        cargado: false
+        feedback: null
       }
     },
     created() {
-      this.datos = this.$route.params.id_policia;
-      this.cargado = true;
+      this.datos = this.$route.params.id_ciudadano;
     },
     methods: {
       generarDenuncia: function () {
@@ -100,9 +97,10 @@
                 if (!this.denuncia.denunciado) {
                   this.denuncia.denunciado = 'Desconocido.'
                 }
+                this.denuncia.usuarioDenunciante = this.datos;
                 db.collection('denuncia').add(this.denuncia).then(() => {
                   this.feedback = null;
-                  this.$router.push({name: 'policia', params: {id_policia: this.datos}});
+                  this.$router.push({name: 'ciudadano', params: {id_ciudadano: this.datos}});
                 }).catch(err => {
                   console.log(err);
                 });
@@ -121,7 +119,7 @@
 
       },
       volverAtras() {
-        this.$router.push({name: 'policia', params: {id_policia: this.datos}});
+        this.$router.push({name: 'ciudadano', params: {id_ciudadano: this.datos}});
       },
     }
   }
