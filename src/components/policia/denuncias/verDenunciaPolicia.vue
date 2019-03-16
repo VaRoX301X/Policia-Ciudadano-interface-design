@@ -29,7 +29,7 @@
             <li v-for="(aportacion, idx) in denuncia.aportaciones" :key="idx">{{idx}}. {{ aportacion }}</li>
             <br>
           </ul>
-
+          <button class="btn btn-primary btn-block" v-on:click.prevent="cerrarDenuncia">Cerrar denuncia  <i class="far fa-times-circle"></i></button>
         </div>
         <div class="col-3"></div>
       </div>
@@ -72,6 +72,12 @@
         }).catch(err => {
           console.log(err);
         });
+      },
+      cerrarDenuncia() {
+        db.collection('denuncia').doc(this.datosId).delete()
+          .then(() => {
+            this.$router.push({name: 'vDenunciasP', params: {id_policia: this.datos}});
+          })
       }
 
     },

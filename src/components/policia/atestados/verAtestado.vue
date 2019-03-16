@@ -21,6 +21,7 @@
               <p class="card-text" v-for="dni in atestado.implicados">{{dni}}</p>
               <h5 class="card-title">Vehículos involucrados</h5>
               <p class="card-text" v-for="vehiculo in atestado.vehiculos">{{vehiculo}}</p>
+              <button class="btn btn-info btn-block" v-on:click.prevent="cerrarAtestado">Cerrar Atestado  <i class="far fa-times-circle"></i></button>
             </div>
           </div>
         </div>
@@ -45,6 +46,12 @@
     methods: {
       volverAtras() {
         this.$router.push({name: 'atestados', params: {id_policia: this.datos}});
+      },
+      cerrarAtestado() {
+        db.collection('atestado').doc(this.id_atestado).delete()
+          .then(() => {
+            this.$router.push({name: 'atestados', params: {id_policia: this.datos}});
+          })
       }
     },
     created() {
@@ -54,7 +61,8 @@
         this.atestado = atestado.data();
       });
       console.log(this.atestado);
-    }
+    },
+
   }
 </script>
 
