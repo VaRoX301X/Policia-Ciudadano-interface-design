@@ -19,6 +19,7 @@ import verDenunciaPolicia from "./components/policia/denuncias/verDenunciaPolici
 import editarDenunciaPolicia from "./components/policia/denuncias/editarDenunciaPolicia";
 import generarDenunciaCiudadano from "./components/ciudadano/denuncias/generarDenunciaCiudadano";
 import verDenunciasCiudadano from "./components/ciudadano/denuncias/verDenunciasCiudadano";
+import verDenunciaCiudadano from "./components/ciudadano/denuncias/verDenunciaCiudadano";
 
 export default [
   { path: '*', name: '*', component: mainPage},
@@ -42,5 +43,6 @@ export default [
   { path: '/policia/:id_policia/verDenuncia/:denunciaId', name: 'vDenunciaP', component: verDenunciaPolicia},
   { path: '/policia/:id_policia/editarDenuncia/:denunciaId', name: 'eDenunciaP', component: editarDenunciaPolicia},
   { path: '/ciudadano/:id_ciudadano/generarDenuncia', name: 'gDenunciaC', component: generarDenunciaCiudadano},
-  { path: '/policia/:id_ciudadano/verDenuncias', name: 'vDenunciasC', component: verDenunciasCiudadano},
+  { path: '/ciudadano/:id_ciudadano/verDenuncias', name: 'vDenunciasC', component: verDenunciasCiudadano},
+  { path: '/ciudadano/:id_ciudadano/verDenuncia/:denunciaId', name: 'vDenunciaC', component: verDenunciaCiudadano},
 ]

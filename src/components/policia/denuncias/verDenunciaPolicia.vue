@@ -1,5 +1,5 @@
 <template>
-  <div class="ver-denuncia" v-if="denuncia">
+  <div class="ver-denuncia" v-if="cargado">
     <div class="container">
       <hr>
       <i class="fas fa-file-alt" style="font-size: 7rem; color: #007bff;"></i>
@@ -53,7 +53,8 @@
       return {
         datos: null,
         datosId: null,
-        denuncia: null
+        denuncia: null,
+        cargado: false
 
       }
     },
@@ -87,6 +88,7 @@
       db.collection('denuncia').doc(this.$route.params.denunciaId).get().then(d => {
         this.denuncia = d.data();
       });
+      this.cargado = true;
     }
   }
 </script>
