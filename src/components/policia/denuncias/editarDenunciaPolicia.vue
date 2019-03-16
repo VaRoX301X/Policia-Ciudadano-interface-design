@@ -1,5 +1,5 @@
 <template>
-  <div class="editar-denuncia" v-if="denuncia">
+  <div class="editar-denuncia" v-if="cargado">
     <div class="container">
       <hr>
       <i class="fas fa-file-alt" style="font-size: 7rem; color: #007bff;"></i>
@@ -62,6 +62,9 @@
       <br>
       <p class="text-danger" v-if="feedback">{{ feedback }}</p>
     </div>
+    <div class="volver">
+      <i class="fas fa-arrow-circle-left" style="color: #007bff; font-size: 4rem;" v-on:click.prevent="volverAtras"></i>
+    </div>
   </div>
 </template>
 
@@ -93,6 +96,7 @@
           'Allanamiento',
           'Secuestro'
         ],
+        cargado: false
       }
     },
     methods: {
@@ -136,7 +140,10 @@
         this.denuncia.aportaciones = this.denuncia.aportaciones.filter(aportacion => {
           return aportacion !== ap;
         });
-      }
+      },
+      volverAtras() {
+        this.$router.push({name: 'vDenunciaP', params: {id_policia: this.datos, denunciaId: this.datosId}});
+      },
     },
     created() {
       this.datos = this.$route.params.id_policia;
@@ -144,6 +151,7 @@
       db.collection('denuncia').doc(this.$route.params.denunciaId).get().then(d => {
         this.denuncia = d.data();
       });
+      this.cargado = true;
     }
   }
 </script>
@@ -160,6 +168,12 @@
     bottom: 1rem;
     color: #aaa;
     font-size: 1.4rem;
+    cursor: pointer;
+  }
+  .volver {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
     cursor: pointer;
   }
 </style>

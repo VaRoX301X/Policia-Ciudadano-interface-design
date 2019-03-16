@@ -20,6 +20,7 @@ import editarDenunciaPolicia from "./components/policia/denuncias/editarDenuncia
 import generarDenunciaCiudadano from "./components/ciudadano/denuncias/generarDenunciaCiudadano";
 import verDenunciasCiudadano from "./components/ciudadano/denuncias/verDenunciasCiudadano";
 import verDenunciaCiudadano from "./components/ciudadano/denuncias/verDenunciaCiudadano";
+import editarDenunciaCiudadano from "./components/ciudadano/denuncias/editarDenunciaCiudadano";
 
 export default [
   { path: '*', name: '*', component: mainPage},
@@ -45,4 +46,5 @@ export default [
   { path: '/ciudadano/:id_ciudadano/generarDenuncia', name: 'gDenunciaC', component: generarDenunciaCiudadano},
   { path: '/ciudadano/:id_ciudadano/verDenuncias', name: 'vDenunciasC', component: verDenunciasCiudadano},
   { path: '/ciudadano/:id_ciudadano/verDenuncia/:denunciaId', name: 'vDenunciaC', component: verDenunciaCiudadano},
+  { path: '/ciudadano/:id_ciudadano/editarDenuncia/:denunciaId', name: 'eDenunciaC', component: editarDenunciaCiudadano},
 ]
