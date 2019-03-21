@@ -18,11 +18,11 @@
             </div>
           </div>
           <div class="col-7 align-left">
-            <button type="button" class="btn btn-secondary btn-block" v-on:click.prevent="editarPerfil">Editar perfil <i
+            <button type="button" class="btn btn-secondary btn-block btn-lg" v-on:click.prevent="editarPerfil">Editar perfil <i
               class="fas fa-user-cog"></i></button>
-            <button type="button" class="btn btn-primary btn-block" v-on:click.prevent="verDenuncias">Ver denuncias  <i class="far fa-copy"></i></button>
-            <button type="button" class="btn btn-danger btn-block" v-on:click.prevent="generarDenuncia">Generar denuncia  <i class="far fa-newspaper"></i></button>
-            <button type="button" class="btn btn-info btn-block" v-on:click.prevent="verAtestados">Ver atestados  <i class="fas fa-file-alt"></i></button>
+            <button type="button" class="btn btn-primary btn-block btn-lg" v-on:click.prevent="verDenuncias">Ver denuncias  <i class="far fa-file-excel"></i></button>
+            <button type="button" class="btn btn-danger btn-block btn-lg" v-on:click.prevent="generarDenuncia">Generar denuncia  <i class="far fa-newspaper"></i></button>
+            <button type="button" class="btn btn-info btn-block btn-lg" v-on:click.prevent="verAtestados">Ver atestados  <i class="fas fa-file-alt"></i></button>
           </div>
         </div>
       </div>

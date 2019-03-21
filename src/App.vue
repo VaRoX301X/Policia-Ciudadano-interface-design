@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <navbar></navbar>
     <router-view></router-view>
   </div>
 </template>
@@ -14,6 +15,7 @@ import loginPolicia from "./components/policia/loginPolicia";
 import registrarCiudadano from "./components/ciudadano/registrarCiudadano";
 import ciudadano from "./components/ciudadano/ciudadano";
 import alerta from "./components/varios/alerta";
+import navbar from "./components/navbar";
 export default {
   name: 'app',
   data () {
@@ -30,7 +32,8 @@ export default {
     'login-policica': loginPolicia,
     'registrar-ciudadano': registrarCiudadano,
     'alerta': alerta,
-    'ciudadano': ciudadano
+    'ciudadano': ciudadano,
+    'navbar': navbar
   }
 }
 </script>

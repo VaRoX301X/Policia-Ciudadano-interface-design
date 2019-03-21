@@ -1,6 +1,7 @@
 <template>
   <div id="loginPolicia" v-if="cargado">
     <div class="container">
+      <hr>
       <h2>LOGIN POLICIA</h2>
       <hr>
       <font-awesome-icon icon="landmark" style="font-size: 7rem; color: #000;"></font-awesome-icon>

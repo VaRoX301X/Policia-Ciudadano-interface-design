@@ -1,6 +1,7 @@
 <template>
   <div id="loginCiudadano" v-if="cargado">
     <div class="container">
+      <hr>
       <h4>¿Ya eres usuario/a?</h4>
       <h5>¡Rellena los siguientes campos de login y entra ya!</h5>
       <br>

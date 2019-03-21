@@ -1,5 +1,8 @@
 <template>
   <div id="nuevo-atestado">
+    <div class="volver">
+      <i class="fas fa-arrow-circle-left" style="color: #17a2b8; font-size: 4rem;" v-on:click.prevent="volverAtras"></i>
+    </div>
     <div class="container">
       <hr>
       <i class="fas fa-file-medical" style="font-size: 7em; color: #17a2b8;"></i>
@@ -122,6 +125,9 @@
           this.feedback = 'Introduce un titulo';
         }
       },
+      volverAtras(){
+        this.$router.push({ name: 'atestados', params: {id_policia: this.datos}});
+      },
       nuevaPersona() {
         if (this.otraP) {
           this.atestado.implicados.push(this.otraP);
@@ -171,6 +177,12 @@
     bottom: 1rem;
     color: #aaa;
     font-size: 1.4rem;
+    cursor: pointer;
+  }
+  .volver {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
     cursor: pointer;
   }
 </style>

@@ -27,7 +27,7 @@
         <h3 class="text-danger" v-if="feedback">{{ feedback }}</h3>
       </form>
       <div id="preview">
-        <h3>Preview policia</h3>
+        <h3>Vista previa policia</h3>
         <p>Nombre: {{policia.nombre}}</p>
         <p>Apellidos: {{policia.apellidos}}</p>
         <p>Numero de placa: {{policia.numeroPlaca}}</p>

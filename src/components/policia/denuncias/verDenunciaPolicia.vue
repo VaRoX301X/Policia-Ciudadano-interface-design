@@ -17,8 +17,8 @@
               <p class="card-text">{{ denuncia.contenido }}</p>
               <h5 class="card-title">Denunciante: {{ denuncia.usuarioDenunciante }}</h5>
               <h5 class="card-title">Denunciado/a: {{ denuncia.denunciado }}</h5>
-              <a class="btn btn-primary pointer" v-on:click="editar">Editar <i class="fas fa-edit"></i></a><br>
-              <a class="btn btn-success pointer btn-block" v-on:click.prevent="aprobar" v-if="!denuncia.aceptada">Aceptar denuncia</a><br>
+              <button class="btn btn-primary pointer" v-on:click="editar">Editar <i class="fas fa-edit"></i></button><br>
+              <button class="btn btn-success btn-block" v-on:click.prevent="aprobar" v-if="!denuncia.aceptada">Aceptar denuncia</button><br>
             </div>
           </div>
           <br>

@@ -45,7 +45,7 @@
           </form>
         </div>
         <div class="col">
-          <h6>Preview del registro:</h6>
+          <h6>Vista previa del registro:</h6>
           <p><b>Nombre:</b> {{ rCiudadano.nombre }}</p>
           <p><b>Apellidos:</b> {{ rCiudadano.apellidos }}</p>
           <p><b>DNI:</b> {{ rCiudadano.dni }}</p>

@@ -3,3 +3,10 @@ node_modules/
 .idea/workspace.xml
 .idea/workspace.xml
 .idea/workspace.xml
+dist/index.html
+.idea/workspace.xml
+.firebaserc
+.firebase/hosting.ZGlzdA.cache
+.firebase/hosting..cache
+firestore.indexes.json
+firestore.rules

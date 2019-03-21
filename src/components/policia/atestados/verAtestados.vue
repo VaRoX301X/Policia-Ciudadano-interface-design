@@ -1,19 +1,25 @@
 <template>
-    <div id="ver-atestados" v-if="cargado">
+    <div v-if="cargado">
       <div class="nuevo">
           <i class="fas fa-plus-circle" style="color: #17a2b8; font-size: 4rem;" v-on:click.prevent="nuevoAtestado"></i>
       </div>
       <div class="volver">
         <i class="fas fa-arrow-circle-left" style="color: #17a2b8; font-size: 4rem;" v-on:click.prevent="volverAtras"></i>
       </div>
-      <div class="card" style="width: 18rem;" v-for="atestado in atestados" :key="atestado.id">
-        <div class="card-body">
-          <h5 class="card-title">{{atestado.titulo}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ atestado.lugar }}</h6>
-          <p class="card-text">{{ atestado.descripcionBreve }}</p>
-          <a class="card-link clicker" v-on:click.prevent="verAtestado(atestado.id)" style="color: #17a2b8;">ver más</a>
+      <hr>
+      <h1>Atestados</h1>
+      <hr>
+      <div  id="ver-atestados" >
+        <div class="card" style="width: 18rem;" v-for="atestado in atestados" :key="atestado.id">
+          <div class="card-body">
+            <h5 class="card-title">{{atestado.titulo}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ atestado.lugar }}</h6>
+            <p class="card-text">{{ atestado.descripcionBreve }}</p>
+            <button type="button" class="btn btn-info" v-on:click.prevent="verAtestado(atestado.id)">ver más</button>
+          </div>
         </div>
       </div>
+
     </div>
 </template>
 

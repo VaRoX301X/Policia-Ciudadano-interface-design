@@ -20,9 +20,9 @@
             </div>
           </div>
           <div class="col-7 align-left">
-            <button type="button" class="btn btn-secondary btn-block" v-on:click.prevent="editarPerfil">Editar perfil  <i class="fas fa-user-cog"></i></button>
-            <button type="button" class="btn btn-primary btn-block" v-on:click.prevent="verDenuncias">Ver denuncias  <i class="far fa-copy"></i></button>
-            <button type="button" class="btn btn-danger btn-block" v-on:click.prevent="generarDenuncia">Generar pre-denuncia  <i class="far fa-newspaper"></i></button>
+            <button type="button" class="btn btn-secondary btn-block btn-lg" v-on:click.prevent="editarPerfil">Editar perfil  <i class="fas fa-user-cog"></i></button>
+            <button type="button" class="btn btn-primary btn-block btn-lg" v-on:click.prevent="verDenuncias">Ver denuncias  <i class="far fa-file-excel"></i></i></button>
+            <button type="button" class="btn btn-danger btn-block btn-lg" v-on:click.prevent="generarDenuncia">Generar pre-denuncia  <i class="far fa-newspaper"></i></button>
             <button type="button" class="btn btn-warning btn-block btn-lg" v-on:click.prevent="enviarAlerta">Enviar alerta  <i class="fas fa-exclamation-triangle"></i></button>
           </div>
         </div>

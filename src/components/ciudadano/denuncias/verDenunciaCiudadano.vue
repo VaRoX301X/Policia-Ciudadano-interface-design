@@ -18,7 +18,7 @@
                 <p class="card-text">{{ denuncia.contenido }}</p>
                 <h5 class="card-title">Denunciante: {{ denuncia.usuarioDenunciante }}</h5>
                 <h5 class="card-title">Denunciado/a: {{ denuncia.denunciado }}</h5>
-                <a class="btn btn-primary pointer" v-on:click="editar">Editar <i class="fas fa-edit"></i></a>
+                <button class="btn btn-primary" v-on:click="editar">Editar <i class="fas fa-edit"></i></button>
                 </div>
             </div>
             <br>
